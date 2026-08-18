@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Job Copilot",
+  title: "AI Job Copilot — Know Your Fit",
   description:
-    "Understand your fit, identify skill gaps, and prepare stronger job applications with AI.",
+    "Understand job requirements, identify skill gaps, and prepare stronger applications with an AI-powered career workspace.",
 };
 
 export default function RootLayout({
@@ -28,6 +28,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-medium focus:text-black"
+        >
+          Skip to main content
+        </a>
+
         {children}
       </body>
     </html>
