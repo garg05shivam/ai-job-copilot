@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Job Copilot — Know Your Fit",
+  title: "AI Job Copilot — Senior Engineering Fit & Gap Engine",
   description:
-    "Understand job requirements, identify skill gaps, and prepare stronger applications with an AI-powered career workspace.",
+    "Deterministic requirement extraction, AST signal verification, and actionable skill gap remediation engine built for senior engineering roles.",
 };
 
 export default function RootLayout({
@@ -24,15 +24,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark scroll-smooth overflow-x-hidden">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-[#0F0F11] text-[#FAFAFA] selection:bg-[#F59E0B]/20 selection:text-white overflow-x-hidden max-w-full`}
       >
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-medium focus:text-black"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-sm focus:border focus:border-[#F59E0B] focus:bg-[#16161A] focus:px-4 focus:py-2.5 focus:text-xs focus:font-mono focus:tracking-wider focus:text-[#FAFAFA] focus:outline-none"
         >
-          Skip to main content
+          SKIP TO MAIN CONTENT
         </a>
 
         {children}

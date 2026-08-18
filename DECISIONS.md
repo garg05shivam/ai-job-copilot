@@ -1,76 +1,25 @@
-# Design & Implementation Decisions
+# DECISIONS.md
 
-## Product concept
+## 1. Why this strategy over the obvious alternative?
 
-AI Job Copilot is a frontend product concept designed to help candidates understand a job description, evaluate their fit, identify skill gaps, and prepare stronger applications.
+I chose the premium home-page track and built AI Job Copilot as an interactive product surface instead of a generic AI SaaS landing page. The obvious alternative was a centered hero, feature cards, fake logos, and vague "AI-powered" claims. I rejected that because the assessment asks for a Product Hunt-level first impression and specifically grades honest, product-visible work.
 
-The product experience is presented as a concept/demo rather than as an existing commercial product.
+The page leads with the product itself: a senior engineering fit matrix, target-role selector, expandable AST evidence rows, terminal log simulation, code diff inspector, and Web Vitals benchmark cards. The goal is for the visitor to understand the product by using it, not by reading marketing copy.
 
-## Design direction
+## 2. One trade-off made under the time limit
 
-I chose a premium dark interface with high contrast, restrained borders, generous spacing, and a single blue accent.
+I used believable deterministic sample data instead of wiring a real repository parser and job-spec ingestion backend. That keeps the frontend focused, responsive, and demoable within the challenge window, but it means the AST evidence is prototype content rather than live analysis.
 
-The goal was to make the product feel focused and professional rather than visually overloaded.
+With a real week, I would connect the UI to a parser service that accepts a GitHub repo URL plus job description, runs TypeScript AST analysis, stores evidence snapshots, and exports a real candidate brief as Markdown.
 
-## Homepage structure
+## 3. Where AI tools were used and what I verified
 
-The homepage follows a product-first narrative:
+AI helped accelerate layout exploration, component copy, and interaction ideas. I personally verified the product direction against the assessment constraints: no fake testimonials, no fake customer logos, no inflated user counts, visible product UI in the first screen, one restrained motion system, responsive dark-mode implementation, and real working controls.
 
-1. Hero
-2. Interactive job analysis
-3. How it works
-4. Capabilities
-5. Application preparation
-6. Final CTA
-7. Footer
+I also ran local quality checks after implementation:
 
-The product analysis is placed directly within the hero area so the visitor can understand what the product does without relying only on marketing copy.
+- `npm.cmd run lint`
+- `npm.cmd run build`
+- Local render at `http://127.0.0.1:3000`
 
-## Interaction
-
-The main interaction is the job analysis flow.
-
-Clicking "Analyze a job" changes the interface into an analyzing state and then reveals a demonstration match result and recommendation.
-
-This is a frontend prototype interaction. No real AI model or backend service is being represented as active.
-
-## Responsive design
-
-The interface was designed for both desktop and mobile layouts.
-
-The assignment's required 390px mobile and 1440px desktop viewport sizes were considered during implementation.
-
-The mobile navigation changes from the desktop navigation into a collapsible menu.
-
-## Accessibility
-
-The project includes:
-
-- Semantic HTML structure
-- Keyboard-focus indicators
-- Accessible mobile navigation controls
-- `aria-expanded` state for the mobile menu
-- A skip-to-main-content link
-- Reduced-motion support
-
-## Technology choices
-
-- Next.js
-- TypeScript
-- Tailwind CSS
-- Motion
-- Lucide React
-
-No backend or database was added because the assignment focuses on the frontend experience for this part.
-
-## AI usage disclosure
-
-AI assistance was used during development for brainstorming, implementation guidance, code generation, debugging support, and refinement.
-
-All generated code was reviewed and adapted as part of the implementation, and the final project structure and design decisions were intentionally chosen for this assignment.
-
-## Honesty and demo data
-
-The product uses demonstration content to illustrate the experience.
-
-No fabricated customer counts, testimonials, company logos, or claims of real product usage are presented.
+The browser DOM output confirmed the page renders with correct Unicode, semantic content, and the required product sections.

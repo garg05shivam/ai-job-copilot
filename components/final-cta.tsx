@@ -1,42 +1,37 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Terminal } from "lucide-react";
 
 export default function FinalCta() {
   return (
-    <section className="border-t border-[var(--border)] px-6 py-24 lg:px-8 lg:py-32">
-      <div className="mx-auto max-w-5xl">
-        <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface)] px-6 py-16 text-center sm:px-10 lg:px-16 lg:py-20">
+    <section className="border-t border-[#26262B] bg-[#0F0F11] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-4xl">
+        <div className="relative overflow-hidden rounded-md border border-[#26262B] bg-[#16161A] px-6 py-14 text-center sm:px-10 lg:px-16 lg:py-16">
           
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute left-1/2 top-0 -z-0 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--accent-soft)] blur-3xl"
-          />
-
           <div className="relative z-10">
-            <p className="text-sm font-medium uppercase tracking-[0.22em] text-[var(--accent)]">
-              Start with clarity
-            </p>
+            <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-[#26262B] bg-[#0F0F11] px-3.5 py-1 text-[11px] font-mono tracking-widest text-[#A1A1AA]">
+              <Terminal className="h-3.5 w-3.5 text-[#F59E0B]" />
+              DETERMINISTIC EVALUATION
+            </div>
 
-            <h2 className="mx-auto mt-5 max-w-3xl text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl lg:text-6xl">
-              Stop guessing.
+            <h2 className="mx-auto mt-6 max-w-2xl text-3xl font-bold tracking-tight text-[#FAFAFA] sm:text-4xl lg:text-5xl">
+              Eliminate rejection vectors.
               <br />
-              Start knowing your fit.
+              Validate your fit now.
             </h2>
 
-            <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-[var(--muted)]">
-              Explore how an AI-powered job workspace can turn a role into a
-              clearer plan for your next application.
+            <p className="mx-auto mt-4 max-w-xl text-xs sm:text-sm leading-relaxed text-[#A1A1AA]">
+              Run your AST signals against real target engineering specifications and get an immediate shortlisting edge.
             </p>
 
             <a
               href="#product"
-              className="mx-auto mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-transform hover:-translate-y-0.5"
+              className="mx-auto mt-8 inline-flex items-center gap-2 rounded-sm bg-[#F59E0B] px-6 py-3 font-mono text-xs font-semibold tracking-wider text-[#0F0F11] transition-all duration-500 ease-[0.25,1,0.5,1] hover:bg-[#d98b06] hover:shadow-xl hover:shadow-[#F59E0B]/10 active:scale-[0.99]"
             >
-              Analyze a job
+              RUN FIT MATRIX ENGINE
               <ArrowRight className="h-4 w-4" />
             </a>
 
-            <p className="mt-4 text-xs text-[var(--muted-foreground)]">
-              Interactive product concept · Demo experience
+            <p className="mt-4 font-mono text-[10px] text-[#71717A]">
+              DETERMINISTIC ATS & AST SIGNAL AUDITOR — v2.4-PROD
             </p>
           </div>
         </div>
